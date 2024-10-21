@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+   <h:outputStylesheet library="css" name="table-style.css"  />
+		<title>Home_Admin</title>
+    </h:head>
+
+<a href="login.xhtml">&#10218;Ritorna al login</a>
+<h:body>
+	<center>
+	<h1>&#x1F935; Aggiungi Prodotto</h1>
+	</center>
+	<h:form>  
+		<h2>Aggiungi Prodotto</h2>
+		<h5>Nome</h5>
+		 <h:inputText name="nome" value="#{prodottoBean.getProdotto().nome}"/>
+		<h5>Prezzo</h5>
+	     <h:inputText name="prezzo" value="#{prodottoBean.getProdotto().prezzo}" >
+	         <f:validateDoubleRange minimum = "1" maximum = "1000" />
+	     </h:inputText>
+		<h5>Quantità</h5>
+	     <h:inputText  name="qta" value="#{prodottoBean.getProdotto().quantità}" >
+	     <f:validateLongRange minimum="1" maximum="200" />
+	     </h:inputText>
+	 <h:commandLink value="Aggiungi" action="#{prodottoBean.inserisci(prodottoBean.getProdotto().getNome().trim(), prodottoBean.getProdotto().getPrezzo(), prodottoBean.getProdotto().getQuantità())}"  />
+	 	
+	 </h:form > 
+	 <br />
+	 <br />
+	 <h:form >
+		 <h2>Rimuovi Prodotto    </h2>
+		 <h5>ID Prodotto</h5>
+	     <h:inputText name="id" value="#{prodottoBean.getProdotto().id}"/>
+	   	 <h5>Quantità</h5>
+	     <h:inputText  name="qtaR" value="#{prodottoBean.getProdotto().quantità}" >
+	   		 <f:validateLongRange minimum="1" maximum="200" />
+	  		 </h:inputText>
+	   <h:commandLink value="Rimuovi" action="#{prodottoBean.rimuoviProdotto(prodottoBean.getProdotto().getId(),prodottoBean.getProdotto().getQuantità())}"  />
+	     
+	</h:form >
+	 
+
+<center>
+<h:form>
+   <h:dataTable value="#{prodottoBean.lista()}" var="prodotto" 
+   				styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row">
+      <f:facet name="header">Prodotti</f:facet>
+      		
+      		<h:column style="text-align:center;">
+				<f:facet name="header">-</f:facet>
+				<img src="resources/immagine_progetto/#{prodotto.id}.jpg" width="20px" height="20px" alt="immagine">
+                </img>
+			</h:column>
+      		
+			<h:column style="text-align:center;">
+				<f:facet name="header">id</f:facet>
+				<h:outputText value="#{prodotto.id}"/>
+			</h:column>
+			
+			<h:column style="text-align:center;">
+				<f:facet name="header">nome</f:facet>
+				<h:outputText value="#{prodotto.nome}"/>
+			</h:column>
+			<h:column style="text-align:center;">
+				<f:facet name="header">prezzo</f:facet>
+				<h:outputText value="#{prodotto.prezzo}"/>
+			</h:column>
+			<h:column style="text-align:center;">
+				<f:facet name="header">quantità</f:facet>
+				<h:outputText value="#{prodotto.quantità}"/>
+			</h:column>
+            
+   </h:dataTable></h:form>
+</center>
+   
+    
+   
+   </h:body>
+   
+</html>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <h:head>
+    	<h:outputStylesheet library="css" name="table-style.css"  />
+        <title>Home</title>
+    </h:head>
+    <h:body>
+    <h1>&#127968; Home   &#x1F935;</h1>
+    <h1>	
+    	<h:outputLabel value="Ciao  " />
+    	<h:outputLabel value="#{utenteView.username}" />
+    	 <h:outputLabel value="   &#x1F935;" />
+    	<a href= "Carrello.xhtml" id = "carrello">&#128722;Carrello</a>
+    </h1>
+    <br></br>
+    <br></br>
+      <center><a href= "listaOrdini.xhtml" id = "ordini">&#12349;Ordini</a></center>
+    <br></br>
+  
+    	<h:form><center>
+    		<h:dataTable value="#{prodottoBean.lista()}" var="prodotto"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    		>
+
+    		    <h:column>
+    				<f:facet name="header">&#183;</f:facet>
+                    <img src="resources/immagine_progetto/#{prodotto.id}.jpg" width="100px" height="100px" alt="immagine">
+                    </img>
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">Id</f:facet>
+    				#{prodotto.id}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">Nome</f:facet>
+    				#{prodotto.nome}
+    			</h:column>
+    			
+    			
+    			<h:column>
+    				<f:facet name="header">Quantità</f:facet>
+    				#{prodotto.quantità}
+    			</h:column>
+    		    
+    		    <h:column>
+    				<f:facet name="header">Prezzo</f:facet>
+    				#{prodotto.prezzo} €
+    			</h:column>
+    		    
+    		    
+    		    <h:column>
+    				<f:facet name="header">Aggiungi al carrello</f:facet>
+				    <h:commandLink value="+" action="#{ordineBean.aggiungiOrdine(prodotto.id,utenteView.username)}"/>
+			    </h:column>
+    		  
+    		
+    		</h:dataTable></center>
+    	</h:form>
+      <br></br>
+      <br></br>
+      <br></br>
+     
+  	
+    </h:body>
+    <h2><a href= "login.xhtml" id = "login">Logout  &#128682;</a></h2>
+</html>

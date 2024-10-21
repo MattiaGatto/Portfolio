@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+      
+<h:head>
+<title>Ordini Completati</title></h:head>
+<h:outputStylesheet library="css" name="table-style.css"  />
+<h:body>
+<a href="home.xhtml">&#10218;Ritorna alla home</a>
+<br></br>
+
+     
+<h1>&#128722; Ordini</h1>
+<h:form><h:messages style="color:green;margin:8px;" />
+    		<h:dataTable value="#{ordineBean.listaOrdini(utenteView.username)}" var="ordine"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    		>
+    		
+    			
+    					
+    			<h:column>
+    				<f:facet name="header">OrdineId</f:facet>
+    				#{ordine.id}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">Data</f:facet>
+    				#{ordine.getData().toString().substring(0,19)}
+    			</h:column>
+    		    
+    		    <h:column>
+    				<f:facet name="header">Costo</f:facet>
+    				#{ordine.prezzo} €
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">Lista Prodotti Acquistati</f:facet>
+    				#{ordine.getListaprodottiOrdine()}
+    				
+    			</h:column>
+    		</h:dataTable>
+    	</h:form>
+   </h:body>
+</html>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+      
+<h:head>
+<title>Carrello</title></h:head>
+<h:outputStylesheet library="css" name="table-style.css"  />
+<h:body>
+<a href="home.xhtml">&#10218;Ritorna alla home</a>
+<br></br>
+
+     
+<h1>&#128722; Carrello</h1>
+<h3>Totale importo #{ordineBean.TotaleImporto(utenteView.username)} €</h3>
+				    
+<h:form><h:messages style="color:green;margin:8px;" />
+    		<h:dataTable value="#{ordineBean.listaCarrello(utenteView.username)}" var="prodotto"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    		>
+    		
+    			<h:column>
+    				<f:facet name="header">&#183;</f:facet>
+                    <img src="resources/immagine_progetto/#{prodotto.prodottoID}.jpg" width="100px" height="100px" alt=" immagine">
+                    </img>
+    			</h:column>
+    			
+    					
+    			<h:column>
+    				<f:facet name="header">ProdottoId</f:facet>
+    				#{prodotto.prodottoID}
+    			</h:column>
+    			
+    			
+    			
+    			<h:column>
+    				<f:facet name="header">Quantità</f:facet>
+    				#{prodotto.quantità}
+    			</h:column>
+    		    
+    		    <h:column>
+    				<f:facet name="header">Prezzo</f:facet>
+    				#{prodotto.prezzo} €
+    			</h:column>
+    		    
+    		    
+    		    <h:column>
+    				<f:facet name="header">Rimuovi Prodotto</f:facet>
+				    <h:commandLink value="-" action="#{ordineBean.rimuoviOrdine(prodotto.prodottoID,utenteBean.getIdeno(utenteView.username,utenteView.password))}"/>
+			 </h:column>
+    		  
+    		
+    		</h:dataTable>
+    		
+    				
+			 
+    	</h:form>
+      <br></br>
+      <br></br>
+      
+ <h:form>
+<h:commandLink value="Procedi all'ordine" action="#{ordineBean.confermaCompleta(utenteBean.getIdeno(utenteView.username,utenteView.password),ordineBean.listaCarrello(utenteView.username))}"/>
+</h:form>     
+   <br></br>
+   
+  
+    </h:body>
+</html>
