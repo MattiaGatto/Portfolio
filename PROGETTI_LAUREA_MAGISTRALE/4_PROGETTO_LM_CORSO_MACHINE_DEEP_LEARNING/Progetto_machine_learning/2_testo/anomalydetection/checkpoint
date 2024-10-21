@@ -1,0 +1,2 @@
+model_checkpoint_path: "anomaly_Text"
+all_model_checkpoint_paths: "anomaly_Text"

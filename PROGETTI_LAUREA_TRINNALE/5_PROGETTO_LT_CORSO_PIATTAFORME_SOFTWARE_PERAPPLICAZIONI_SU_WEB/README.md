@@ -18,4 +18,4 @@ Il progetto ha l'obiettivo di creare una piattaforma **e-commerce** come parte i
   - Possibilità di ordinare, revisionare e cancellare gli ordini.
   - Pagina di accesso admin per la gestione dei prodotti del sito.
 
-Il progetto copre l'intero ciclo di vita dell
+Il progetto copre l'intero ciclo di vita dell'e-commerce, dalla gestione degli utenti fino all'amministrazione dei prodotti disponibili.
