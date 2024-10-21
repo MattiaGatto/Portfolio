@@ -24,7 +24,7 @@ public class FutoschikiGUI extends JFrame {
 	private static final String[] listaL = {"<",">","","","","","","","","","",""};
 	private static final String[] listaV = {"v","^","","","","","","","","","",""};
 	private JButton[][]celle;
-	private static String difficoltà;
+	private static String difficolta;
 	private static int Diff;
 	private Futoshiki gioco;
 	private int NSOL=25;
@@ -256,12 +256,12 @@ public class FutoschikiGUI extends JFrame {
 		String ris="";
     	while(b) {
 	    	try {
-	    		ris=JOptionPane.showInputDialog("Inserisci livello di diffioltà tra : facile,medio,difficile; ");
+	    		ris=JOptionPane.showInputDialog("Inserisci livello di difficolta tra : facile,medio,difficile; ");
 	    		if(ris.toLowerCase().trim().equals("facile")) {Diff=12;b=false;CostruisciT();}
 	    		else if(ris.toLowerCase().trim().equals("medio")){Diff=10;b=false;CostruisciT();}
 	    		else if(ris.toLowerCase().trim().equals("difficile")){Diff=8;b=false;CostruisciT();}
 			}catch(RuntimeException e) {
-				JOptionPane.showMessageDialog(null,"Inserisci un il livello di diffioltà: facile,medio,difficile;");
+				JOptionPane.showMessageDialog(null,"Inserisci un il livello di difficolta: facile,medio,difficile;");
 			}
 		}
 	}
