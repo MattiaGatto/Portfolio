@@ -1,4 +1,3 @@
-```markdown
 # PROGETTO DI LAUREA MAGISTRALE
 
 **Corso di Laurea Magistrale in Architetture e Programmazione dei Sistemi di Elaborazione**  
@@ -20,4 +19,3 @@ Progetto didattico focalizzato sull'ottimizzazione di query su **dataset di gran
     - Utilizzo del linguaggio **Assembly x86-32 + SSE** e **x86-64 + AVX** per ottimizzazioni a basso livello.
 
 Il progetto è stato realizzato in gruppo, combinando diverse competenze per affrontare sfide di ottimizzazione e calcolo su larga scala.
-```
