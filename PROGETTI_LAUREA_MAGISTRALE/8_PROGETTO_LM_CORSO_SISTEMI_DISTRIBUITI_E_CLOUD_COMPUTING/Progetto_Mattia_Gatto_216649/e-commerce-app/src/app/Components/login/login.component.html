@@ -1,0 +1,37 @@
+<div class="h-100 row align-items-center" id="container" >
+	<div class="form-container sign-in-container">
+		<form [formGroup]="loginForm" (ngSubmit)="login()">
+			<h1>Sign in</h1>
+			
+			<br>
+			
+			<div class="form-group">
+				<input type="email" formControlName="email" class="form-control" id="email" placeholder="Email" required onchange="javascript:sessionStorage.setItem('email',this.value)">
+				<!--script>localStorage.setItem("email",document.getElementById('email'));</script-->
+			</div>
+			<div class="form-group">
+				<input type="password" formControlName="password" class="form-control" id="password" placeholder="Password" required>
+			</div>
+			<div class="modal-footer">
+				<button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary" >Sign In</button>
+			</div>
+			
+		</form>
+		
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				
+				<button  routerLink="/register" routerLinkActive="active" class="ghost" id="signUp">
+					Sign Up
+				</button>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
