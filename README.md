@@ -5,6 +5,7 @@ Sono un ingegnere informatico con una forte passione per l'Intelligenza Artifici
 
 ## Contatti
 - **Email**: [mattia.gatto1997@libero.it](mailto:mattia.gatto1997@libero.it)
+- **BLOG**: [mattiagatto1997.wixsite.com](https://mattiagatto1997.wixsite.com/website)
 - **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/mattia-gatto-5467971a2/)
 - **GitHub**: [GitHub Profile](https://github.com/MattiaGatto)
 
