@@ -1,0 +1,115 @@
+<div >
+    <!-- Navigation-->
+    <footer class="py-5 bg-dark">
+      <a  href="/home"  class="m-0 text-center text-white"><h1 style="color: rgb(255, 255, 255);">Home</h1></a>
+  </footer>
+      
+</div>
+<div class="wrapper" >
+   <h1><i>Tabella ordini</i></h1> 
+    
+  <div *ngFor="let order of ordini" >
+    <div class="table">
+      <div class="row header green">
+        <div class="cell">
+          id
+        </div>
+        <div class="cell">
+          Data
+        </div>
+        <div class="cell">
+          Ora
+        </div>
+        <div class="cell">
+          name
+        </div>
+        <div class="cell">
+          email
+        </div>
+        <div class="cell">
+          indirizzo
+        </div>
+        <div class="cell">
+          Numero
+        </div>
+        <div class="cell">
+          Info
+        </div>
+        <div class="cell">
+          CreditCard
+        </div>
+        <div class="cell">
+          totalCost
+        </div>
+        <div class="cell">
+          Status
+        </div>
+        <div class="cell">
+          Prodotti( quantità, Id, Nome, subTot)
+        </div>
+      </div>
+      <div class="row">
+      <div class="cell" data-title="id">
+        {{order.id}}
+      </div>
+      <div class="cell" data-title="Data">
+        {{order.orderDate.toString().substring(0,10)}}
+      </div>
+      <div class="cell" data-title="Ora">
+        {{order.orderDate.toString().substring(11,19)}}
+      </div>
+      <div class="cell" data-title="name">
+        {{order.nome}} {{order.cognome}}
+      </div>
+      <div class="cell" data-title="email">
+        {{order.email}} 
+      </div>
+      <div class="cell" data-title="indirizzo">
+        {{order.address}} , {{order.city}}, {{order.zipcode}}, {{order.country}}, {{order.state}} 
+      </div>
+      <div class="cell" data-title="Numero">
+        {{order.phonenumber}}
+      </div>
+      <div class="cell" data-title="Info">
+        {{order.description}}
+      </div>
+      <div class="cell" data-title=" CreditCard">
+        {{order.creditCard.creditnumber}}
+      </div>
+      <div class="cell" data-title="totalCost">
+        € {{order.totalCost}}
+      </div>
+      <div class="cell" data-title="Status">
+        {{order.orderStatus}}
+      </div>
+      <div *ngFor="let det of dettagliordini">
+        <div *ngIf="det.placeorder.id ==order.id">
+          <div class="cell" data-title="Detail">
+            {{det.quantity}} 
+          </div>
+          <div class="cell" data-title="Detail">
+            {{det.product.id}} 
+          </div>
+          <div class="cell" data-title="Detail">
+            {{det.product.name}} 
+          </div>
+          <div class="cell" data-title="Detail">
+            €{{det.product.price*det.quantity}} 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+    
+</div>
+</div>
+<footer class="py-5 bg-dark">
+  <div class="container"><p class="m-0 text-center text-white">EliografiaGatto di GattoVincenzo  </p></div>
+  <div class="container">
+      <br>
+      <p class="m-0 text-center text-white">Contatti: </p>
+      <p class="m-0 text-center text-white">email: eliografia.gatto@live.it </p>
+      <p class="m-0 text-center text-white">tel/fax: 0984/395366 </p>
+      
+  </div>
+</footer>

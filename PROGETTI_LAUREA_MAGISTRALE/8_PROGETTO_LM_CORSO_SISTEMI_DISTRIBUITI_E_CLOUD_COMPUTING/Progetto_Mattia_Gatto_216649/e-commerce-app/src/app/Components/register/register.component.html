@@ -1,0 +1,46 @@
+<div class="h-100 row align-items-center" id="container" >
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-right">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button routerLink="/login" routerLinkActive="active" class="ghost" id="signIn">Sign In</button>
+            </div>
+        </div>
+    </div>
+	<div class="form-container sign-in-container">
+		<form [formGroup]="registerForm" (ngSubmit)="createUser()">
+            <h1>Create Account</h1>
+            <br>
+            <div class="form-group">
+                <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email" required onchange="javascript:sessionStorage.setItem('email',this.value)">
+            </div>
+            <div class="form-group">
+                <input type="password" formControlName="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="nome" class="form-control" id="nome" placeholder="Nome " required>
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="cognome" class="form-control" id="cognome" placeholder="Cognome" required>
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="username" class="form-control" id="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="jobTitle" class="form-control" id="jobTitle" placeholder="JobTitle" required>
+            </div>
+            <div class="form-group">
+                <input type="number" formControlName="phone" class="form-control" id="phone" placeholder="Phone" required>
+            </div>
+            <div class="form-group">
+                <input type="number" formControlName="age" class="form-control" id="age" placeholder="Age" required>
+            </div>
+            <div class="modal-footer">
+                <button [disabled]="registerForm.invalid" type="submit" class="btn btn-primary" >Sign up</button>
+            </div>
+		</form>		
+	</div>
+    
+</div>
+
