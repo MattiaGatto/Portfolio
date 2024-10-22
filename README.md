@@ -1,21 +1,12 @@
-# PROGETTO LAUREA TRIENNALE
+# Mattia Gatto - Portfolio
 
-**Corso di Piattaforme Software per Applicazioni su Web**  
-L.T., Università della Calabria (Unical)
+## Chi sono
+Sono un ingegnere informatico con una forte passione per l'Intelligenza Artificiale, Big Data e Machine Learning. Ho conseguito la laurea magistrale presso l'Università della Calabria (UNICAL), dove ho sviluppato diversi progetti accademici. Oltre a questi, ho lavorato a progetti personali e collaborazioni, ampliando continuamente le mie competenze tecniche e sperimentando nuove tecnologie.
 
-## Descrizione del Progetto
-**Settembre 2019**
+## Contatti
+- **Email**: [mattia.gatto1997@libero.it](mailto:mattia.gatto1997@libero.it)
+- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com)
+- **GitHub**: [GitHub Profile](https://github.com)
 
-Il progetto ha l'obiettivo di creare una piattaforma **e-commerce** come parte integrante del corso di laurea triennale in Ingegneria Informatica presso l'Università della Calabria.
-
-## Dettagli del Progetto
-
-- **Piattaforma utilizzata**: Red Hat Developer Studio.
-- **Modello**: Utilizzo di un modello entità-relazione specifico per la definizione dell'e-commerce lato web.
-- **Funzionalità**:
-  - Fase di login per l'accesso degli utenti.
-  - Aggiunta prodotti al carrello.
-  - Possibilità di ordinare, revisionare e cancellare gli ordini.
-  - Pagina di accesso admin per la gestione dei prodotti del sito.
-
-Il progetto copre l'intero ciclo di vita dell
+### Conclusione
+Questo portfolio rappresenta il mio percorso accademico e professionale, che spazia dai progetti sviluppati durante la mia formazione universitaria a quelli più recenti, nati dalla mia passione per la tecnologia. Sono sempre alla ricerca di nuove sfide per continuare a crescere e migliorare.
