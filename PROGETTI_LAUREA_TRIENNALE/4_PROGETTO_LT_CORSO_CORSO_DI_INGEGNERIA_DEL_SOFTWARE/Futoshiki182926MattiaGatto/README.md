@@ -1,3 +1,4 @@
+# Progetto Futoshiki
 La relazione descrive l'uso del **Template Method Design Pattern**, un pattern comportamentale orientato alle classi, in cui la struttura di un algoritmo viene definita in una classe astratta, mentre i dettagli specifici sono implementati nelle sottoclassi. L'obiettivo del pattern è promuovere il riutilizzo del codice e facilitare la modifica di parti specifiche di un algoritmo senza alterarne la struttura generale.
 
 ### Template Method nel contesto del progetto
@@ -23,18 +24,6 @@ L'interfaccia grafica prevede vari scenari interattivi per l'utente:
   - Si seleziona un punto di scelta iniziale.
   - Si verifica se il valore può essere assegnato alla cella corrente.
   - Se la soluzione è valida, si memorizza; altrimenti, si esegue il backtracking.
-  
-  **Esempio di pseudocodice**:
-  ```java
-  public void risolvi() {
-      P ps = primoPuntoDiScelta();
-      S s = primaScelta(ps);
-      boolean backtrack = false, fine = false;
-      do {
-          // Esegue le operazioni di assegnazione e controllo
-      } while (!fine);
-  }
-  ```
 
 ### Altre classi rilevanti:
 - **Cell**: Rappresenta una cella del gioco con riga e colonna.

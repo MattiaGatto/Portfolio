@@ -1,4 +1,3 @@
-```markdown
 # Progetto di Valutazione Espressioni Aritmetiche
 
 Questo progetto implementa un sistema per la valutazione di espressioni aritmetiche tramite un'interfaccia grafica. Durante la realizzazione, sono stati utilizzati i seguenti design pattern:

@@ -1,4 +1,3 @@
-```markdown
 # Progetto di Machine e Deep Learning
 
 ## Dipartimento di Ingegneria Informatica, Modellistica, Elettronica e Sistemistica (DIMES)
@@ -109,4 +108,3 @@ Il progetto ha fornito un'analisi dettagliata delle tecniche di Machine Learning
 ## Contatti
 Per ulteriori informazioni, contattare:
 - **Mattia Gatto**
-```

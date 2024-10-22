@@ -1,4 +1,3 @@
-```markdown
 # Progetto #2: LinkedList
 
 ## Corso di Programmazione Orientata agli Oggetti

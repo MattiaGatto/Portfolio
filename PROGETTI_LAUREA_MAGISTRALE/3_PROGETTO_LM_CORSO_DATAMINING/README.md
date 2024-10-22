@@ -1,4 +1,3 @@
-```markdown
 # Analisi della Pandemia COVID-19: Modelli di Regressione
 
 ## Informazioni sul Progetto
@@ -83,4 +82,3 @@ Questo progetto è distribuito sotto la [Nome della Licenza].
 
 Per ulteriori informazioni, contattare:
 - Mattia Gatto: [mattia.gatto1997@libero.it]
-```
