@@ -1,0 +1,3 @@
+cd segment_sam_app
+sam_venv-linux\Scripts\activate
+python app.py

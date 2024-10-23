@@ -1,0 +1,30 @@
+Ciao Michele,
+
+in seguito alla nostra ultima conversazione, ho completato lo sviluppo del servizio Flask e ti invio il pacchetto qui. Il progetto è contenuto nel file ZIP chiamato DEPLOY.ZIP, all'interno del quale troverai:
+
+- segment_sam_app: il servizio Flask, che include:
+  - image: una cartella con alcune immagini di esempio
+  - model: contiene i modelli utilizzati
+  - results_json: la cartella in cui il servizio salverà i file JSON e GeoJSON, come richiesto in precedenza
+  - temp: la cartella dove dovrai caricare l'immagine da processare
+  - app.py: lo script con tutti i metodi necessari per l'avvio e il funzionamento del servizio Flask
+  - requirements.txt: un elenco delle librerie utilizzate
+
+- image: contiene ulteriori immagini di esempio
+- results_json: la cartella per i file JSON e GeoJSON generati dal servizio
+- esempio_esecuzione.png: uno screenshot del terminale con i comandi per avviare il servizio Flask (in allegato)
+- script_cmd.txt: un file di testo contenente i comandi usati nell'immagine esempio_esecuzione.png per l'avvio del servizio
+- esempio_richiesta_postman.png: uno screenshot di come ho impostato la richiesta HTTP su Postman (in allegato), che richiede:
+  - Richiesta POST a: `http://127.0.0.1:5000/segment`
+  - Form-data con la seguente riga compilata:
+    - Key: file
+    - file_type: Text
+    - Value: photo_2024-09-20_16-00-22.jpg (questo è il nome dell'immagine caricata nella cartella segment_sam_app/temp, ma puoi caricarne altre per ulteriori test)
+- test_sam_model.ipynb: il notebook utilizzato per lo sviluppo, con metodi non inclusi nel servizio ma utili per l'analisi
+- test_sam_model.html: l'export dell'esecuzione del notebook con i relativi output
+
+Ti invio in allegato anche esempio_richiesta_postman.png ed esempio_esecuzione.png. Fammi sapere se hai bisogno di ulteriori informazioni!
+
+Inoltre, vorrei sapere quando hai quotato questa attività che stiamo portando avanti da circa 3 settimane e, soprattutto, se potresti effettuare, come sempre, il pagamento via PayPal.
+
+Fammi sapere se hai bisogno di ulteriori informazioni!
