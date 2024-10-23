@@ -1,0 +1,3 @@
+cd segment_sam_app
+source sam_venv-linux/bin/activate
+python app.py
