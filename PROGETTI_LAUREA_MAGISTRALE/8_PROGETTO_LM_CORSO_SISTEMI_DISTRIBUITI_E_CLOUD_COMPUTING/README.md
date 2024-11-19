@@ -1,4 +1,3 @@
-```markdown
 # Progetto Cordova con Angular e Firebase
 
 ## Introduzione
