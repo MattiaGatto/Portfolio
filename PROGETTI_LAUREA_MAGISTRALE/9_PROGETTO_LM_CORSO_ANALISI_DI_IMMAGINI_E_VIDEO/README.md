@@ -1,6 +1,6 @@
 # README
 
-## **progetto di analisi immagini e video** 
+## **Progetto di analisi immagini e video** 
 Progetto di Simonpaolo Lopez e Mattia Gatto presso l'Università della Calabria, Dipartimento DIMES. L'obiettivo del progetto è classificare i **trailer** video a partire dai **keyframe** estrapolati, in un problema di **multi-classificazione** con 85 etichette possibili.
 
 ### Dettagli del dataset:
