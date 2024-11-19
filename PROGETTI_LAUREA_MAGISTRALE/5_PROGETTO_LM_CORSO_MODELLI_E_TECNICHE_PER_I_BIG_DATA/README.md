@@ -1,4 +1,3 @@
-```markdown
 # README
 
 ## Project Title: Analisi delle Catastrofi Sandy e Joplin attraverso il Framework SPARK
